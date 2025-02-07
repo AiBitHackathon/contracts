@@ -6,8 +6,8 @@ This is a **Hardhat-based smart contract project** that deploys an **ERC721 dNFT
 ---
 
 ## 🔹 Contract Details
-✅ **Contract Address:** [`0xfE14Cd4529A3CD11a1ed841e53b9b76e5A11d131`](https://sepolia.arbiscan.io/address/0xfE14Cd4529A3CD11a1ed841e53b9b76e5A11d131)  
-✅ **Verified on Arbiscan:** [View Contract Code](https://sepolia.arbiscan.io/address/0xfE14Cd4529A3CD11a1ed841e53b9b76e5A11d131)  
+✅ **Contract Address:** [`0xa0b125B1078A625C433C8Bb39c70EBD8f3729b73`](https://sepolia.arbiscan.io/address/0xa0b125B1078A625C433C8Bb39c70EBD8f3729b73)  
+✅ **Verified on Arbiscan:** [View Contract Code](https://sepolia.arbiscan.io/address/0xa0b125B1078A625C433C8Bb39c70EBD8f3729b73)  
 
 ---
 

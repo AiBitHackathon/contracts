@@ -26,8 +26,9 @@ abstract contract AIbitUri is ERC721 {
         string memory json = string(
             abi.encodePacked(
                 '{"name":"', data.name,
-                '","image":"', data.image,
-                '","level":"', data.level, '"}' 
+                '", "image":"', data.image,
+                '", "level":"', data.level,
+                '", "attributes": [ { "trait_type": "Level", "value": "', data.level, '"} ]}'
             )
         );
 
