@@ -34,6 +34,33 @@ contract AIbit is ERC721, AIbitUri, ERC721Pausable, AccessControl {
         _setTokenURI(tokenId, _name, _image, _level);
     }
 
+        // Restrict _setTokenURI to MINTER_ROLE
+    function _setTokenURI(uint256 tokenId, string memory _name, string memory _image, string memory _level) 
+        public 
+        override 
+        onlyRole(MINTER_ROLE) 
+    {
+        super._setTokenURI(tokenId, _name, _image, _level);
+    }
+
+    // Restrict _updateLevel to MINTER_ROLE
+    function _updateLevel(uint256 tokenId, string memory _level) 
+        public 
+        override 
+        onlyRole(MINTER_ROLE) 
+    {
+        super._updateLevel(tokenId, _level);
+    }
+
+    // Restrict _updateImageAndLevel to MINTER_ROLE
+    function _updateImageAndLevel(uint256 tokenId, string memory _image, string memory _level) 
+        public 
+        override 
+        onlyRole(MINTER_ROLE) 
+    {
+        super._updateImageAndLevel(tokenId, _image, _level);
+    }
+
     // The following functions are overrides required by Solidity.
 
     function _update(address to, uint256 tokenId, address auth)

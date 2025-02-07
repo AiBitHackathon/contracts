@@ -27,7 +27,7 @@ abstract contract AIbitUri is ERC721 {
             abi.encodePacked(
                 '{"name":"', data.name,
                 '","image":"', data.image,
-                '","level":"', data.level, '"}' // Fix: Ensure proper closing quote and bracket
+                '","level":"', data.level, '"}' 
             )
         );
 
@@ -37,19 +37,19 @@ abstract contract AIbitUri is ERC721 {
     }
 
 
-    function _setTokenURI(uint256 tokenId, string memory _name, string memory _image, string memory _level) internal virtual {
+    function _setTokenURI(uint256 tokenId, string memory _name, string memory _image, string memory _level) public virtual {
         _requireOwned(tokenId);
         AIbitTokensURI[tokenId].name = _name;
         AIbitTokensURI[tokenId].image = _image;
         AIbitTokensURI[tokenId].level = _level;
     }
 
-    function _updateLevel(uint256 tokenId,  string memory _level) internal virtual {
+    function _updateLevel(uint256 tokenId,  string memory _level) public virtual {
         _requireOwned(tokenId);
         AIbitTokensURI[tokenId].level = _level;
     }
 
-    function _updateImageAndLevel(uint256 tokenId,  string memory _image, string memory _level) internal virtual {
+    function _updateImageAndLevel(uint256 tokenId,  string memory _image, string memory _level) public virtual {
         _requireOwned(tokenId);
         AIbitTokensURI[tokenId].image = _image;
         AIbitTokensURI[tokenId].level = _level;
